@@ -1,0 +1,11 @@
+<div>
+    <h1 class="title">{{ title }}</h1>
+    <div class="links">
+        <a href="#" class="giant-button" *ngFor="let ticket of tickets">
+            <span>
+                FROM: {{ ticket.from }} -
+                {{ ticket.time }}
+            </span>
+        </a>
+    </div>
+</div>
