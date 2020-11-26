@@ -23,4 +23,8 @@ export class ClickTravelService {
 
     return this.http.get<Ticket[]>(`${environment.apiBaseUrl}/tickets`, { params });
   }
+
+  getDestinationByCode(code: string): Observable<Destination> {
+    return this.http.get<Destination>(`${environment.apiBaseUrl}/destinations/${code}`);
+  }
 }

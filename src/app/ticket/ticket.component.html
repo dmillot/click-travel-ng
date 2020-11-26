@@ -1,0 +1,27 @@
+<div class="box">
+    <div class="ticket">
+        <span class="airline">Boarding Pass</span>
+        <span class="topclass">{{ ticket.class }}</span>
+        <span class="airline airlineslip">Boarding Pass</span>
+        <span class="topclass airlineslip">{{ ticket.class }}</span>
+        <div class="content">
+            <div class="sub-content">
+                <span class="name">PASSENGER<br><span>{{ ticket.passenger }}</span></span>
+                <span class="flight">FLIGHT<br><span>{{ ticket.flight }}</span></span>
+                <span class="from">FROM<br><span>{{ departure.name | shortDestination }}</span></span>
+                <span class="destination">TO<br><span>{{ destination.name | shortDestination }}</span></span>
+                <span class="class">CLASS<br><span>{{ ticket.class }}</span></span>
+                <span class="gate">GATE<br><span>{{ ticket.gate }}</span></span>
+                <span class="time">TIME<br><span>{{ ticket.time | date:'h:mm' }}</span></span>
+                <span class="seat">SEAT<br><span>{{ ticket.seat }}</span></span>
+
+                <span class="gate gateslip">GATE<br><span>{{ ticket.gate }}</span></span>
+                <span class="time timeslip">TIME<br><span>{{ ticket.time | date:'h:mm' }}</span></span>
+                <span class="seat seatslip">SEAT<br><span>{{ ticket.seat }}</span></span>
+                <span class="name nameslip">PASSENGER<br><span>{{ ticket.passenger }}</span></span>
+                <div class="barcode"></div>
+                <div class="barcode slip"></div>
+            </div>
+        </div>
+    </div>
+</div>

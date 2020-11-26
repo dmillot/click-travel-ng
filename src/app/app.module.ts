@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
 import { DestinationComponent } from './destination/destination.component';
 import { HomeComponent } from './home/home.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { ShortDestinationPipe } from './pipes/short-destination.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
     DestinationComponent,
-    HomeComponent
+    HomeComponent,
+    TicketComponent,
+    ShortDestinationPipe
   ],
   imports: [
     BrowserModule,

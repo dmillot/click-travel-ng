@@ -1,11 +1,11 @@
 <div>
     <h1 class="title">{{ title }}</h1>
     <div class="links">
-        <a href="#" class="giant-button" *ngFor="let ticket of tickets">
-            <span>
-                FROM: {{ ticket.from }} -
-                {{ ticket.time }}
-            </span>
-        </a>
+        <div *ngFor="let ticket of tickets">
+            <button (click)="openTicket(ticket)" class="giant-button">
+                {{ ticket.time | date:'medium' }}
+            </button>
+        </div>
     </div>
 </div>
+<app-ticket *ngIf="selectedTicket" [ticket]="selectedTicket"></app-ticket>
